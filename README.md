@@ -20,11 +20,11 @@ The goal for this project is to have an actually safe storage for my photos and 
     <td><strong>Step 5</strong></td>
   </tr>
   <tr>
-    <th><img src="./images/RAIDstep1.jpg" width="200px" /></th>
-    <th><img src="./images/RAIDstep2.jpg" width="200px" /></th>
-    <th><img src="./images/RAIDstep3.jpg" width="200px" /></th>
-    <th><img src="./images/RAIDstep4.jpg" width="200px" /></th>
-    <th><img src="./images/RAIDstep5.jpg" width="200px" /></th>
+    <th><img src="./images/RAIDstep1.jpg" width="300px" /></th>
+    <th><img src="./images/RAIDstep2.jpg" width="300px" /></th>
+    <th><img src="./images/RAIDstep3.jpg" width="300px" /></th>
+    <th><img src="./images/RAIDstep4.jpg" width="300px" /></th>
+    <th><img src="./images/RAIDstep5.jpg" width="300px" /></th>
   </tr>
 </table>
 
