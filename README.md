@@ -30,7 +30,7 @@ The goal for this project is to have an actually safe storage for my photos and 
 
 > After toiling for a solution all yesterday, I woke up and found that the card and lifecycle controller (v1.64.64.64) was not at fault. I plugged the PERC H710P into my desktop and it booted straight to the card BIOS which is good news.
 
-![](./images/PERCBIOS.png)
+![](./images/PERCBIOS.jpg)
 
 ### Notes 12/16/2022
 >Found a possible solution by installing just a driver found through this serverfault [post](https://serverfault.com/questions/1090959/dell-perc-h750-compatibility-with-debian) and I added it to this repository. Backup method is to flash the H710P controller to LSI IT Firmware as seen in this [guide](https://fohdeesha.com/docs/perc.html), but that would defeat the purpose of paying the $67 since other LSI controlers are half the price.
