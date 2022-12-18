@@ -1,12 +1,12 @@
 # raid-dell
-Setting up my first large RAID storage machine
+Setting up my first "large" RAID storage machine
 ## Description
 I'm using a Dell Poweredge T320 Server to host my hard drives for photo backups.
 ## Goal 
 The goal for this project is to have an actually safe storage for my photos and videos that aren't in the cloud. I'm aiming for the 3-2-1 storage solution motto ultimately.
 
 ### Notes 12/18/2022
-> Found web [file broswer](https://filebrowser.org/) that is sleek and opensource with authentication json and can upload and download. Got it setup and working in a service file. 
+> Found web [file broswer](https://filebrowser.org/) that is sleek and opensource with authentication json and can upload and download. Got it setup and working in a [service file](https://linuxhandbook.com/create-systemd-services/). Setup a user and proper proxmox permissions for the shared storage with [Bind Mount Points](https://pve.proxmox.com/wiki/Linux_Container#_bind_mount_points) and [some UID/GID permissions](https://www.reddit.com/r/homelab/comments/6p3xdw/comment/dkncmrc/). [Named](https://namingschemes.com/Trees) it the Oak1. Need to fix an issue with FileBrowser not having perms to make directories.
 
 ### Notes 12/17/2022
 > So I tried to update the BIOS on the Dell T320. Just had make sure to include the correct efi file (v2.9.0 from v2.1.0) on a usbstick and it worked like a charm. Then I made the RAID 10 with all four 500GB drives I had. 
@@ -31,6 +31,8 @@ The goal for this project is to have an actually safe storage for my photos and 
 > After toiling for a solution all yesterday, I woke up and found that the card and lifecycle controller (v1.64.64.64) was not at fault. I plugged the PERC H710P into my desktop and it booted straight to the card BIOS which is good news.
 
 <p float="left"><img src="./images/PERCBIOS.jpg" width="500px" /></p>
+
+> Also yesterday I managed to install the new CPU and its great having 20 threads. Gonna observe how the TDP behaves because we're going for low power in the future. I wanted real low power I would have bought a descrete NAS, but these are just the parts I have on hand.
 
 ### Notes 12/16/2022
 >Found a possible solution by installing just a driver found through this serverfault [post](https://serverfault.com/questions/1090959/dell-perc-h750-compatibility-with-debian) and I added it to this repository. Backup method is to flash the H710P controller to LSI IT Firmware as seen in this [guide](https://fohdeesha.com/docs/perc.html), but that would defeat the purpose of paying the $67 since other LSI controlers are half the price.
