@@ -6,7 +6,9 @@ I'm using a Dell Poweredge T320 Server to host my hard drives for photo backups.
 The goal for this project is to have an actually safe storage for my photos and videos that aren't in the cloud. I'm aiming for the 3-2-1 storage solution motto ultimately.
 
 ### Notes 12/18/2022
-> Found web [file broswer](https://filebrowser.org/) that is sleek and opensource with authentication json and can upload and download. Got it setup and working in a [service file](https://linuxhandbook.com/create-systemd-services/). Setup a user and proper proxmox permissions for the shared storage with [Bind Mount Points](https://pve.proxmox.com/wiki/Linux_Container#_bind_mount_points) and [some UID/GID permissions](https://www.reddit.com/r/homelab/comments/6p3xdw/comment/dkncmrc/). [Named](https://namingschemes.com/Trees) it the Oak1. Need to fix an issue with FileBrowser not having perms to make directories.
+> Found web [file broswer](https://filebrowser.org/) that is sleek and opensource with authentication json and can upload and download. Got it setup and working in a [service file](https://linuxhandbook.com/create-systemd-services/). Setup a user and proper proxmox permissions for the shared storage with [Bind Mount Points](https://pve.proxmox.com/wiki/Linux_Container#_bind_mount_points) and [some UID/GID permissions](https://www.reddit.com/r/homelab/comments/6p3xdw/comment/dkncmrc/). [Named](https://namingschemes.com/Trees) it the Oak1. ~~Need to fix an issue with FileBrowser not having perms to make directories.~~
+
+> Fixed the perm issue and decided to offer a [JellyFin](https://jellyfin.org/) service to stream home videos and music.
 
 ### Notes 12/17/2022
 > So I tried to update the BIOS on the Dell T320. Just had make sure to include the correct efi file (v2.9.0 from v2.1.0) on a usbstick and it worked like a charm. Then I made the RAID 10 with all four 500GB drives I had. 
