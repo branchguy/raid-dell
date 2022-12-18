@@ -5,6 +5,35 @@ I'm using a Dell Poweredge T320 Server to host my hard drives for photo backups.
 ## Goal 
 The goal for this project is to have an actually safe storage for my photos and videos that aren't in the cloud. I'm aiming for the 3-2-1 storage solution motto ultimately.
 
+### Notes 12/18/2022
+> Found web [file broswer](https://filebrowser.org/) that is sleek and opensource with authentication json and can upload and download. Got it setup and working in a service file. 
+
+### Notes 12/17/2022
+> After toiling for a solution all yesterday, I woke up and found that the card and lifecycle controller (v1.64.64.64) was not at fault. I plugged the PERC H710P into my desktop and it booted straight to the card BIOS which is good news.
+
+![](./images/PERCBIOS.png)
+
+> So I tried to update the BIOS on the Dell T320. Just had make sure to include the correct efi file (v2.9.0 from v2.1.0) on a usbstick and it worked like a charm. Then I made the RAID 10 with all four 500GB drives I had. 
+
+Step 1                        |  Step 2                     | Step 3                      | Step 4                      |
+:----------------------------:|:---------------------------:|:---------------------------:|:---------------------------:|
+![](./images/RAIDstep1.png)   | ![](./images/RAIDstep2.png) | ![](./images/RAIDstep3.png) | ![](./images/RAIDstep4.png) |
+
+
+<table float="left">
+  <tr>
+    <td>Step 1</td>
+    <td>Step 2</td>
+    <td>Step 3</td>
+    <td>Step 4</td>
+  </tr>
+  <tr>
+    <th><img src="./images/RAIDstep1.png" width="100px" /></th>
+    <th><img src="./images/RAIDstep2.png" width="100px" /> </th>
+    <th><img src="./images/RAIDstep3.png" width="100px" /></th>
+    <th><img src="./images/RAIDstep4.png" width="100px" /></th>
+  </tr>
+</table>
 
 ### Notes 12/16/2022
 >Found a possible solution by installing just a driver found through this serverfault [post](https://serverfault.com/questions/1090959/dell-perc-h750-compatibility-with-debian) and I added it to this repository. Backup method is to flash the H710P controller to LSI IT Firmware as seen in this [guide](https://fohdeesha.com/docs/perc.html), but that would defeat the purpose of paying the $67 since other LSI controlers are half the price.
